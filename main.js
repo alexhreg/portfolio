@@ -1,22 +1,3 @@
-// import Swiper from 'swiper';
-// import { Navigation, Pagination } from 'swiper/modules';
-// // import Swiper and modules styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
-
-
-
-// const cursor = document.getElementById("follow-cursor");
-
-// // For circle following cursor
-// window.addEventListener("mousemove", function(e){
-//     cursor.style.left = e.clientX+20 + "px";
-//     cursor.style.top = e.clientY+20 + "px";
-//     cursor.style.zIndex = -10;
-// })
-
 function CopyText() {
     navigator.clipboard.writeText("alex.hregdovic@outlook.com");
 }
