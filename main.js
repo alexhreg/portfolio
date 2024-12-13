@@ -24,6 +24,9 @@ function CopyText() {
 document.getElementById("open-button").addEventListener("click", OpenMenu);
 
 function OpenMenu() {
+    document.getElementById("open-button").style.display = "none";
+    document.getElementById("close-button").style.display = "block";
+
     document.getElementById("nav-buttons").classList.toggle('open');
     document.getElementById("nav-container-mobile").classList.toggle('open');
     console.log("Menu Opened");
@@ -32,6 +35,9 @@ function OpenMenu() {
 document.getElementById("close-button").addEventListener("click", CloseMenu);
 
 function CloseMenu() {
+    document.getElementById("close-button").style.display = "none";
+    document.getElementById("open-button").style.display = "block";
+
     document.getElementById("nav-buttons").classList.toggle('open');
     document.getElementById("nav-container-mobile").classList.toggle('open');
     console.log("Menu Closed");

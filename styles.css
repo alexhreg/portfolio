@@ -134,7 +134,7 @@ h1 {
 
     text-decoration: none;
     color: #ECECEC;
-    font-size: 12pt;
+    font-size: 14pt;
     font-family: Lato;
 
     height: 50px;
@@ -206,7 +206,7 @@ h1 {
     /* justify-content: center; */
 }
 #nav-container-mobile.open {
-    height: 340px;
+    height: 350px;
     width: calc(100vw - 40px);
     /* width: calc(100vw - 60px); */
     /* width: calc(25vw + 50px); */
@@ -244,6 +244,7 @@ h1 {
     align-self: center;
     padding-left: 0;
     margin-top: 20px;
+    margin-bottom: 15px;
     /* margin-left: 28.38px; */
 }
 #nav-buttons.open {
@@ -268,17 +269,16 @@ h1 {
 #nav-buttons li:hover {
     cursor: pointer;
 }
-#nav-buttons ul a {
+#nav-buttons a {
     color: #2D2D36;
 }
-.current-page-nav {
-    color: red;
-    font-weight: bold;
-    font-size: 16pt;
+#nav-buttons .current-page-nav {
+    font-weight: bolder;
+    font-size: 36pt;
 }
-
-
-
+#close-button {
+    display: none;
+}
 
 
 
@@ -369,10 +369,11 @@ main {
     background-color: #FDFDFD;
     border: #00000030 2px solid;
     border-radius: 30px;
-    /* margin-left: -20px; */
+    transition: .3s;
 }
 #short-description:hover {
     border: #45C6A6 2px solid;
+    transition: .3s;
 }
 #short-description p {
     max-width: 30ch;
@@ -426,7 +427,7 @@ main {
 .home-project-card {
     background-color: #FDFDFD;
     border-radius: 30px;
-    padding: 10px 5px 10px 5px;
+    padding: 10px;
     border: #00000030 2px solid;
     max-width: 500px;
     width: 100%;
@@ -549,11 +550,6 @@ footer img:hover {
     background-color: #FDFDFD;
     transition: .3s;
     max-width: calc(100vw - 40px);
-}
-.project:hover {
-    border: #45C6A6 2px solid;
-    transition: .3s;
-    transform: scale(1.04);
 }
 
 .project:first-of-type {
@@ -728,5 +724,12 @@ footer img:hover {
 @media (width <= 540px) {
     .main-content {
         margin: 0 20px 0 20px;
+    }
+}
+@media (pointer: fine) {
+    .project:hover {
+        border: #45C6A6 2px solid;
+        transition: .3s;
+        transform: scale(1.04);
     }
 }
