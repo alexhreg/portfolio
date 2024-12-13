@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Hregdovic | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <div id="nav-container-mobile">
+            <div class="nav-toggles">
+                <img src="./icons/nav-hamburger.svg" id="open-button">
+            </div>
+            <nav id="nav-buttons">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <header>
+            <div class="header-container">
+                <div class="hello-box"><img src="./icons/hand-waving.svg">Hello, I'm</div>
+                <h1>Contact</h1>
+                <p><span>Just an Email Away</span></p>
+                <div class="socials">
+                    <a href="#"><img src="./icons/github-logo.svg" alt="GitHub"></a>
+                    <a href="#"><img src="./icons/linkedin-logo.svg" alt="LinkedIn "></a>
+                    <a href="./HregdovicAlexResume.pdf" download="AlexHregdovicResume"><img src="./icons/download-simple.svg">Resume</a>
+                    <button onClick="CopyText()"><img src="./icons/copy.svg" >alex.hregdovic@outlook.com</button>
+                </div>
+            </div>
+            <nav id="nav-container-desktop">
+                <a href="./index.html">Home</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <img src="./images/wave-border.svg" id="wave-border-top">
+            <div class="main-content contact-content">
+                <!-- <div id="follow-cursor"></div> -->
+                <div class="email-subject">
+                    <input type="email" placeholder="Email" required id="email-input">
+                    <input type="text" placeholder="Subject" required id="subject-input">
+                </div>
+                
+                <textarea name="message" id="message-box" placeholder="Enter Text"></textarea>
+
+                <button id="submit-button">Submit</button>
+            </div>
+            <img src="./images/wave-border.svg" id="wave-border-bottom">
+        </main>
+        <footer>
+            Made with <img src="./icons/heart.svg"> by Alex Hregdovic
+        </footer>
+
+    </div>
+</body>
+</html>
