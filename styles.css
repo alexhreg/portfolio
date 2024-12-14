@@ -117,6 +117,7 @@ h1 {
     width: 50px;
     border-radius: 30px;
     background-color: #00000030;
+    transition: .3s;
 }
 .socials a:last-of-type {
     width: auto;
@@ -142,6 +143,7 @@ h1 {
     border: none;
     padding: 0 10px;
     background-color: #00000030;
+    transition: .3s;
 }
 .socials button:hover {
     cursor: pointer;
@@ -169,6 +171,9 @@ h1 {
     font-size: 32pt;
     margin: 10px;
     transition: .3s;
+}
+#nav-container-desktop a {
+    margin: 15px;
 }
 #nav-container-desktop a:hover {
     transform: scale(1.1);
@@ -203,10 +208,9 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 #nav-container-mobile.open {
-    height: 350px;
+    height: 375px;
     width: calc(100vw - 40px);
     /* width: calc(100vw - 60px); */
     /* width: calc(25vw + 50px); */
@@ -257,7 +261,7 @@ h1 {
     font-family: "Josefin Sans";
     /* text-align: left; */
     /* margin: 0; */
-    margin-top: 30px;
+    margin-top: 40px;
 }
 #nav-buttons li {
     padding: 0;
@@ -275,6 +279,11 @@ h1 {
 #nav-buttons .current-page-nav {
     font-weight: bolder;
     font-size: 36pt;
+    color: #45C6A6;
+    background-color: #2d2d36;
+    outline: #00000030 2px solid;
+    border-radius: 40px;
+    padding: 12px 40px 8px 40px;
 }
 #close-button {
     display: none;
@@ -736,5 +745,13 @@ footer img:hover {
         border: #45C6A6 2px solid;
         transition: .3s;
         transform: scale(1.04);
+    }
+    .socials a:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+    .socials button:hover {
+        transform: scale(1.04);
+        transition: .3s;
     }
 }
