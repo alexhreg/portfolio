@@ -444,6 +444,7 @@ main {
 .home-project-card p {
     /* clear: left; */
     font-family: Lato;
+    line-height: 1.5;
 }
 .project-tech {
     display: flex;
@@ -453,7 +454,9 @@ main {
 .project-tech p {
     background-color: #ECECEC;
 }
-
+.education p {
+    line-height: 1.5;
+}
 #coursework {
     margin-bottom: 40px;
 }
@@ -565,6 +568,9 @@ footer img:hover {
     transition: .3s;
     max-width: calc(100vw - 40px);
 }
+.project p {
+    line-height: 1.5;
+}
 
 .project:first-of-type {
     margin-top: 40px;
@@ -606,6 +612,7 @@ footer img:hover {
 .about-intro {
     max-width: 36ch;
     font-size: 15pt;
+    line-height: 1.3;
 }
 .line {
     height: 2px;
@@ -615,6 +622,7 @@ footer img:hover {
 }
 .about-end {
     margin-bottom: 40px;
+    line-height: 1.5;
 }
 #portrait {
     height: 150px;
