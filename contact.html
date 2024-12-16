@@ -10,20 +10,20 @@
 <body>
     <div class="container">
 
-        <div id="nav-container-mobile">
-            <div class="nav-toggles">
+        <div id="mobile-nav-container">
+            <div id="nav-toggles">
                 <img src="./icons/nav-hamburger.svg" id="open-button">
                 <img src="./icons/x-nav.svg" id="close-button">
             </div>
-
-            <div class="nav-line"></div>
-
-            <nav id="nav-buttons">
+    
+            <div class="nav-line"> </div>
+    
+            <nav id="mobile-nav">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./projects.html">Projects</a></li>
                     <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html" class="current-page-nav">Contact</a></li>
+                    <li id="active-page"><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,26 +34,30 @@
                 <p><span>Just an Email Away</span></p>
                 <div class="socials">
                     <a href="https://github.com/alexhreg"><img src="./icons/github-logo.svg" alt="GitHub"></a>
-                    <a href="www.linkedin.com/in/alex-hregdovic-b95b67262"><img src="./icons/linkedin-logo.svg" alt="LinkedIn "></a>
+                    <a href="https://www.linkedin.com/in/alex-hregdovic-b95b67262"><img src="./icons/linkedin-logo.svg" alt="LinkedIn "></a>
                     <a href="./HregdovicAlexResume.pdf" download="AlexHregdovicResume"><img src="./icons/download-simple.svg">Resume</a>
                     <button onClick="CopyText()"><img src="./icons/copy.svg" >alex.hregdovic@outlook.com</button>
                 </div>
             </div>
-            <nav id="nav-container-desktop">
-                <a href="./index.html">Home</a>
-                <a href="./projects.html">Projects</a>
-                <a href="./about.html">About</a>
-                <a href="./contact.html">Contact</a>
+            <nav id="desktop-nav-container">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </nav>
         </header>
 
         <main>
             <img src="./images/wave-border.svg" id="wave-border-top">
             <div class="main-content contact-content">
-                <div class="email-subject">
+
+                <div class="email-name">
                     <input type="email" placeholder="Email" required id="email-input">
-                    <input type="text" placeholder="Subject" required id="subject-input">
+                    <input type="text" placeholder="Name" required id="name-input">
                 </div>
+                <input type="text" placeholder="Subject" required id="subject-input">
                 
                 <textarea name="message" id="message-box" placeholder="Enter Text"></textarea>
 

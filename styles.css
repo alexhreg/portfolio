@@ -159,12 +159,12 @@ h1 {
 
 
 /* Navigation */
-#nav-container-desktop {
+#desktop-nav-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#nav-container-desktop a, #nav-container-mobile a{
+#desktop-nav-container a, #nav-container-mobile a{
     text-decoration: none;
     color: #ECECEC;
     font-family: 'Josefin Sans';
@@ -172,121 +172,120 @@ h1 {
     margin: 10px;
     transition: .3s;
 }
-#nav-container-desktop a {
-    margin: 15px;
+#desktop-nav-container ul {
+    padding: 0;
+    list-style-type: none;
 }
-#nav-container-desktop a:hover {
+#desktop-nav-container li {
+    margin: 30px 0;
+    transition: .3s;
+}
+#desktop-nav-container li:hover{
     transform: scale(1.1);
     transition: .3s;
     color: #45C6A6;
 }
-
-
-
-.nav-line {
-    height: 2px;
-    width: 90%;
-    align-self: center;
-    background-color: #00000030;
-    margin-top: 25px;
-    /* margin-left: 20px; */
-    /* margin-right: 20px; */
+#desktop-nav-container a {
+    margin: 15px;
+    transition: .3s;
 }
-#nav-container-mobile {
-    background-color: #ECECEC;
-    outline: #00000030 2px solid;
-    border-radius: 30px;
+#desktop-nav-container a:hover {
+    color: #45C6A6;
+    transition: .3s;
+}
+
+
+
+
+
+#mobile-nav-container {
+    font-family: 'Josefin Sans';
+    background-color: #2d2d36;
     position: fixed;
-    right: 0;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
+    
+
     height: 50px;
     width: 50px;
-    transition: .3s;
+    border-radius: 30px;
+    outline: #00000030 2px solid;
     overflow: hidden;
-    margin: 20px 20px 0 0;
-    z-index: 10;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-#nav-container-mobile.open {
-    height: 375px;
-    width: calc(100vw - 40px);
-    /* width: calc(100vw - 60px); */
-    /* width: calc(25vw + 50px); */
-    transition: .4s;
-    padding: 10px;
-}
-.nav-toggles {
-    background-color: #ECECEC;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    outline: #00000030 2px solid;
+    flex-direction: column;
 
+    transition: .3s ease-out;
+}
+#mobile-nav-container.open {
+    height: 400px;
+    width: calc(100vw - 40px);
+    transition: .3s ease-out;
+}
+#nav-toggles {
     display: flex;
     justify-content: center;
     align-items: center;
-
     align-self: center;
-    z-index: 10;
+
+    background-color: #ececec;
+    border-radius: 30px;
+    outline: #00000030 2px solid;
+
+    height: 50px;
+    width: 50px;
 
     position: absolute;
+    z-index: 11;
+    transition: .3s ease-out;
 }
-.nav-toggles:hover {
-    cursor: pointer;
-}
-.nav-toggles.open {
-    margin: 5px 0 0 5px;
-}
-#nav-buttons {
-    display: none;
-    overflow: hidden;
-
-    font-size: 32pt;
-
-    align-self: center;
-    padding-left: 0;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    /* margin-left: 28.38px; */
-}
-#nav-buttons.open {
-    display: block;
-    transition: .3s;
-}
-#nav-buttons ul {
-    list-style-type: none;
-    padding: 0;
-    font-family: "Josefin Sans";
-    /* text-align: left; */
-    /* margin: 0; */
-    margin-top: 40px;
-}
-#nav-buttons li {
-    padding: 0;
-    margin: 20px 0;
-    /* text-align: center; */
-    /* color: #ECECEC; */
-    text-align: center;
-}
-#nav-buttons li:hover {
-    cursor: pointer;
-}
-#nav-buttons a {
-    color: #2D2D36;
-}
-#nav-buttons .current-page-nav {
-    font-weight: bolder;
-    font-size: 36pt;
-    color: #45C6A6;
-    background-color: #2d2d36;
-    outline: #00000030 2px solid;
-    border-radius: 40px;
-    padding: 12px 40px 8px 40px;
+#nav-toggles.open {
+    margin-top: 10px;
+    transition: .3s ease-out;
 }
 #close-button {
     display: none;
+}
+.nav-line {
+    align-self: center;
+    min-height: 2px;
+    width: 90%;
+    margin-top: 35px;
+    background-color: #00000030;
+}
+#mobile-nav {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: .5s;
+}
+#mobile-nav.open {
+    transform: translateY(20px);
+    opacity: 1;
+    transition: .5s;
+}
+#mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+#mobile-nav li {
+    margin: 35px 0;
+    text-align: center;
+    padding: 0 15px 0 15px;
+}
+#mobile-nav a {
+    text-decoration: none;
+    color: #ececec;
+    font-size: 32pt;
+}
+#active-page {
+    border-left: #00000030 solid 2px;
+    border-right: #00000030 solid 2px;
+}
+#active-page a {
+    font-weight: bold;
+    color: #45C6A6;
 }
 
 
@@ -356,7 +355,6 @@ main {
 .main-content h2 {
     font-family: 'Josefin Sans';
     margin-top: 60px;
-    /* margin-bottom: 10px; */
 }
 #short-description {
     margin: auto;
@@ -376,37 +374,30 @@ main {
 
     
     background-color: #FDFDFD;
-    border: #00000030 2px solid;
+    outline: #00000030 2px solid;
     border-radius: 30px;
     transition: .3s;
 }
 #short-description:hover {
-    border: #45C6A6 2px solid;
+    outline: #45C6A6 2px solid;
     transition: .3s;
 }
 #short-description p {
     max-width: 30ch;
     color: #2D2D36;
-    line-height: 1.3;
-}
-.description-line {
-    height: 2px;
-    /* width: 15rem; */
-    /* width: 116.3px; */
-    margin: 0 20px 0 20px;
-    background-color: #00000030;
+    line-height: 1.5;
 }
 
-#main-technologies h2 {
+
+#primary-technologies h2 {
     margin-top: 40px;
 }
-.main-technologies, .experience-with-bubbles, .home-project-cards, .courses{
-    /* max-width: 500px; */
+.technologies, .experience-with-bubbles, .home-project-cards, .courses{
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
-.main-technologies p, .experience-with-bubbles p, .courses p, .project-tech p {
+.technologies p, .experience-with-bubbles p, .courses p, .project-tech p {
     font-family: Lato;
     background-color: #FDFDFD;
     border-radius: 30px;
@@ -420,7 +411,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-.main-technologies p:hover, .experience-with-bubbles p:hover, .courses p:hover, .project-tech p:hover {
+.technologies p:hover, .experience-with-bubbles p:hover, .courses p:hover, .project-tech p:hover {
     border: #45C6A6 2px solid;
     transform: scale(1.04);
     transition: .3s;
@@ -432,6 +423,9 @@ main {
 }
 .home-project-cards h3 {
     font-family: 'Josefin Sans';
+    padding-bottom: 15px;
+    border-bottom: #00000030 2px solid;
+    float: left;
 }
 .home-project-card {
     background-color: #FDFDFD;
@@ -442,7 +436,7 @@ main {
     width: 100%;
 }
 .home-project-card p {
-    /* clear: left; */
+    clear: left;
     font-family: Lato;
     line-height: 1.5;
 }
@@ -527,9 +521,9 @@ footer img:hover {
 
 
 
+/* Projects */
 .swiper {
     max-width: 100%;
-    /* height: 300px; */
     border-radius: 30px;
     border: #00000030 2px solid;
 }
@@ -558,6 +552,9 @@ footer img:hover {
 .projects {
     display: flex;
     flex-direction: column;
+}
+.projects-redirect {
+    line-height: 1.5;
 }
 .project {
     margin: 30px 0;
@@ -632,7 +629,7 @@ footer img:hover {
     transition: .3s;
 }
 #portrait.blow-up {
-    transform: scale(1.75) translateX(-40%);
+    transform: scale(1.75) translateX(-45%);
     transition: .3s;
 }
 
@@ -668,19 +665,23 @@ footer img:hover {
 
 
 
-.email-subject {
+.email-name {
     margin: 40px 0 20px 0;
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
-.email-subject #email-input {
+.email-name #email-input {
     flex-grow: 1;
 }
-.email-subject #subject-input {
+.email-name #name-input {
     flex-grow: 1;
 }
-.email-subject input, #message-box {
+#subject-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+input, #message-box {
     background-color: #FDFDFD;
     border-radius: 30px;
     border: #00000030 2px solid;
@@ -689,7 +690,7 @@ footer img:hover {
     transition: .3s;
     color: #2D2D36;
 }
-.email-subject input:focus, #message-box:focus {
+input:focus, #message-box:focus {
     border: #45C6A6 2px solid;
     transition: .3s;
     outline: none;
@@ -710,6 +711,7 @@ footer img:hover {
     border: none;
     background-color: #45C6A6;
     color: #2D2D36;
+    font-size: 10pt;
     font-weight: bolder;
 }
 
@@ -734,12 +736,12 @@ footer img:hover {
 
 
 @media (width <= 730px) {
-    #nav-container-desktop {
+    #desktop-nav-container {
         display: none;
     }
 }
 @media (width > 730px) {
-    #nav-container-mobile {
+    #mobile-nav-container {
         display: none;
     }
 }

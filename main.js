@@ -8,8 +8,9 @@ function OpenMenu() {
     document.getElementById("open-button").style.display = "none";
     document.getElementById("close-button").style.display = "block";
 
-    document.getElementById("nav-buttons").classList.toggle('open');
-    document.getElementById("nav-container-mobile").classList.toggle('open');
+    document.getElementById("nav-toggles").classList.toggle('open');
+    document.getElementById("mobile-nav-container").classList.toggle('open');
+    document.getElementById("mobile-nav").classList.toggle('open');
     console.log("Menu Opened");
 }
 
@@ -19,8 +20,9 @@ function CloseMenu() {
     document.getElementById("close-button").style.display = "none";
     document.getElementById("open-button").style.display = "block";
 
-    document.getElementById("nav-buttons").classList.toggle('open');
-    document.getElementById("nav-container-mobile").classList.toggle('open');
+    document.getElementById("nav-toggles").classList.toggle('open');
+    document.getElementById("mobile-nav-container").classList.toggle('open');
+    document.getElementById("mobile-nav").classList.toggle('open');
     console.log("Menu Closed");
 }
 
