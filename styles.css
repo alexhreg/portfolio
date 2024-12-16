@@ -565,8 +565,14 @@ footer img:hover {
     transition: .3s;
     max-width: calc(100vw - 40px);
 }
+.project h3 {
+    border-bottom: #00000030 2px solid;
+    padding-bottom: 15px;
+    float: left;
+}
 .project p {
     line-height: 1.5;
+    clear: left;
 }
 
 .project:first-of-type {
